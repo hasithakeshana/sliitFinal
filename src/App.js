@@ -19,6 +19,8 @@ import Projects from './components/TravelProjects';
 import Landing from './landingPage/landing';
 import Sample from './components/Sample';
 import BookNow from './components/BookCourse';
+import Login from './components/Login';
+import Register from './components/Register';
 
 
 class App extends Component {
@@ -36,7 +38,8 @@ class App extends Component {
          
           <Route exact path="/booknow" component={BookNow}/>
 
-          <Route exact path="/testPage" component={TestPage}/>
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/register" component={Register}/>
 
             
           

@@ -2,6 +2,7 @@ import React    , {useEffect, useState}  from "react";
 import {  MDBRow, MDBCol, MDBCardBody, MDBIcon, MDBBtn, MDBView, MDBMask } from "mdbreact";
 import queryString from 'query-string';
 import {getUniqueCourse,bookCourse} from '../apiRoutes/CoursesRoutes';
+import jwt_decode from 'jwt-decode';
 
 const BookCourse = (props) => {
 
@@ -30,14 +31,27 @@ const BookCourse = (props) => {
 
     const submit = async (id) =>{
 
-       // "email" : "keshana",
-       // "userId" : "5ee4b5029d9a9c1e013e4358"
 
-       const email = 'keshana';
-       const userId = '5ee4b5029d9a9c1e013e4358'
+       const token = localStorage.getItem('jwtToken');
+       if(token === null || token === undefined){
+     
 
-       const data = {email,userId,id}
+        console.log('need to login');
+      }
+      else{
+  
+        const decodeUser = jwt_decode(token);
+        const email = decodeUser.email;
+        const userId = decodeUser.id;
+
+        const data = {email,userId,id}
         const res = await bookCourse(data);
+
+        console.log('res bookkig',res);
+  
+      }
+
+      
 
     
        

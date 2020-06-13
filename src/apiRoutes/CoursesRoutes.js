@@ -76,3 +76,12 @@ export const bookCourse = async(data) =>{
     
 
 }
+
+
+export const getAllTotalCourses = async () => {
+	const response = await axios.get(
+		`http://localhost:4000/course/getTotalOfCourses`
+	);
+	return response;
+};
+

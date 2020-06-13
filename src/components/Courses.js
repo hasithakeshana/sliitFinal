@@ -1,6 +1,8 @@
 import React  , { useState , useEffect } from "react";
 import {  MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBBadge } from "mdbreact";
 import {getAllCourses} from '../apiRoutes/CoursesRoutes';
+
+
 import { useHistory } from 'react-router-dom';
 
 const EcommercePage = () => {
@@ -32,8 +34,23 @@ const EcommercePage = () => {
 
   const handleClick = (id) => {
 
-    history.push("/booknow?"+"productId="+id);
-  console.log('clickeddd',id);
+//console.log('tokenn');
+
+
+    const token = localStorage.getItem('jwtToken');
+
+    if(token === null || token === undefined){
+     
+
+      console.log('need to login');
+    }
+    else{
+
+      history.push("/booknow?"+"productId="+id);
+      console.log('clickeddd',id);
+
+    }
+
 }
   
     useEffect(()=>{

@@ -11,6 +11,8 @@ import Courses from './Courses';
 import back from './back.css';
 import Book from './BookCourse';
 
+import Sample from './Sample';
+
 export class MainPage extends Component {
     render() {
         return (
@@ -22,6 +24,8 @@ export class MainPage extends Component {
             <Images></Images>
              
             <Courses></Courses>
+
+            <Sample></Sample>
          
            
            

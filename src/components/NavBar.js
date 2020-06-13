@@ -12,6 +12,12 @@ toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
 }
 
+ clicked = ()=>{
+console.log('xxxx');
+
+localStorage.removeItem('jwtToken');
+}
+
 render() {
   return (
 <div>
@@ -26,13 +32,13 @@ render() {
               <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/projects">Features</MDBNavLink>
+              <MDBNavLink to="/register">SignUp</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/booknow">BookNow</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/testPage">TestPage</MDBNavLink>
+              <MDBNavLink to="/login">Login</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
@@ -51,7 +57,10 @@ render() {
           <MDBNavbarNav right>
             <MDBNavItem>
               <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="twitter" />
+              <span onClick={ () => this.clicked()}>
+                <MDBIcon  icon="power-off" />
+                SignOut
+                </span>
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>

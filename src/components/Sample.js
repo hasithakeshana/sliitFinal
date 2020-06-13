@@ -8,6 +8,8 @@ import Projects from './TravelProjects';
 import Images from './Images';
 import Landing from '../landingPage/landing';
 
+import CoursesChart from './CoursesChart';
+
 export class Sample extends Component {
     render() {
         return (
@@ -17,14 +19,10 @@ export class Sample extends Component {
                         <PieChart></PieChart>
                     </div>
                     <div className="col-md-6">
-                        <LineChart></LineChart>
+                        <CoursesChart></CoursesChart>
                     </div>
-                    <div className="col-md-6">
-                        <LineChart></LineChart>
-                    </div>
-                    <div className="col-md-6">
-                        <LineChart></LineChart>
-                    </div>
+                    
+                   
                 </div>
                 
             </div>
