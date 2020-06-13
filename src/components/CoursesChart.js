@@ -78,7 +78,9 @@ function Cour() {
   
     return (
       <MDBContainer>
-        <h3 className='mt-5'>Bar chart</h3>
+      <h2 className="h1-responsive font-weight-bold text-center my-5">
+      Courses Stats View 02
+    </h2>
         <HorizontalBar
           data={state.dataHorizontal}
           options={{ responsive: true }}

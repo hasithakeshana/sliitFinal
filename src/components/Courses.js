@@ -41,7 +41,7 @@ const EcommercePage = () => {
 
     if(token === null || token === undefined){
      
-
+      history.push("/login");
       console.log('need to login');
     }
     else{
@@ -67,7 +67,7 @@ const EcommercePage = () => {
     
     <section className="text-center my-5">
       <h2 className="h1-responsive font-weight-bold text-center my-5">
-        Our bestsellers
+        Online Courses
       </h2>
       <p className="grey-text text-center w-responsive mx-auto mb-5">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
@@ -90,34 +90,38 @@ const EcommercePage = () => {
               />
               <MDBCardBody className="text-center">
                 <a href="#!" className="grey-text">
-                  <h5>{item.name}</h5>
+                  <h5>{item.category}</h5>
                 </a>
                 <h5>
                   <strong>
                     <a href="#!" className="dark-grey-text">
-                      Denim shirt{" "}
+                      {item.name}{" "}
                       <MDBBadge pill color="danger">
                         NEW
                       </MDBBadge>
                     </a>
                   </strong>
                 </h5>
-                <h4 className="font-weight-bold blue-text">
-                  <strong>120$</strong>
-                </h4>
+                <br></br>
+                <h6 className="font-weight-bold blue-text">
+                  <strong>LKR {item.fee} . 00</strong>
+                </h6>
               </MDBCardBody>
             </MDBCard>
             </div>
+            <br></br>
           </MDBCol>
+          
           )
       }
 
       
        
-       
+
        
         
       </MDBRow>
+
     </section>
   );
 }

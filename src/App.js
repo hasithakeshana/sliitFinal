@@ -21,6 +21,7 @@ import Sample from './components/Sample';
 import BookNow from './components/BookCourse';
 import Login from './components/Login';
 import Register from './components/Register';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -44,8 +45,9 @@ class App extends Component {
             
           
         </Switch>
-      
+     
     </Router>
+   
        </div>
       
     );

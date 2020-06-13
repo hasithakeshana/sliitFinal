@@ -74,7 +74,9 @@ useEffect(()=>{
 
     return (
       <MDBContainer>
-        <h3 className="mt-5">Pie chart</h3>
+      <h2 className="h1-responsive font-weight-bold text-center my-5">
+      Courses Stats View 01
+    </h2>
         <Pie data={state.dataPie} options={{ responsive: true }} />
       </MDBContainer>
     );

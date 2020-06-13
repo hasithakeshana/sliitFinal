@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import {getUniqueCourse,bookCourse} from '../apiRoutes/CoursesRoutes';
 import jwt_decode from 'jwt-decode';
 
+
 const BookCourse = (props) => {
 
     const [course,setCourse] = useState({});
@@ -50,13 +51,11 @@ const BookCourse = (props) => {
         console.log('res bookkig',res);
   
       }
+    }
 
-      
-
-    
-       
-       
-      }
+    const back = async ()=>{
+        
+    }
 
 
 
@@ -75,7 +74,7 @@ const BookCourse = (props) => {
         <MDBRow>
           <MDBCol lg="5" className="mb-lg-0 mb-5">
             <img
-              src="https://mdbootstrap.com/img/Photos/Others/images/83.jpg"
+            src= {"http://localhost:4000/uploads/"+course.image}
               alt=""
               className="img-fluid rounded z-depth-1"
             />
@@ -86,9 +85,9 @@ const BookCourse = (props) => {
                 <MDBIcon far icon="chart-bar" size="2x" className="indigo-text" />
               </MDBCol>
               <MDBCol md="11" size="10">
-                <h5 className="font-weight-bold mb-3">Marketing</h5>
-                <p className="grey-text">
-                  test
+                <h5 className="font-weight-bold mb-3">CATEGORY</h5>
+                <p className="font-weight-bold">
+                    {course.category}
                 </p>
               </MDBCol>
             </MDBRow>
@@ -97,9 +96,9 @@ const BookCourse = (props) => {
                 <MDBIcon icon="music" size="2x" className="pink-text" />
               </MDBCol>
               <MDBCol md="11" size="10">
-                <h5 className="font-weight-bold mb-3">Entertainment</h5>
-                <p className="grey-text">
-                test 2
+                <h5 className="font-weight-bold mb-3">Trainer</h5>
+                <p className="font-weight-bold">
+                {course.trainer}
                 </p>
               </MDBCol>
             </MDBRow>
@@ -108,17 +107,39 @@ const BookCourse = (props) => {
                 <MDBIcon far icon="smile" size="2x" className="blue-text" />
               </MDBCol>
               <MDBCol md="11" size="10">
-                <h5 className="font-weight-bold mb-3">Communication</h5>
-                <p className="grey-text">
-                  test 3
+                <h5 className="font-weight-bold mb-3">Scheduled Date</h5>
+                <p className="font-weight-bold">
+                  {course.date}
                 </p>
               </MDBCol>
             </MDBRow>
+            <MDBRow className="mb-3">
+            <MDBCol md="1" size="2">
+              <MDBIcon far icon="smile" size="2x" className="blue-text" />
+            </MDBCol>
+            <MDBCol md="11" size="10">
+              <h5 className="font-weight-bold mb-3">About Course</h5>
+              <p className="font-weight-bold">
+                {course.description}
+              </p>
+            </MDBCol>
+          </MDBRow>
+          <MDBRow className="mb-3">
+          <MDBCol md="1" size="2">
+            <MDBIcon far icon="smile" size="2x" className="blue-text" />
+          </MDBCol>
+          <MDBCol md="11" size="10">
+            <h5 className="font-weight-bold mb-3">No Of Participants(estimate)</h5>
+            <p className="font-weight-bold">
+              {course.noOfParticipants}
+            </p>
+          </MDBCol>
+        </MDBRow>
           </MDBCol>
         </MDBRow>
         <hr className="my-5" />
         <MDBBtn rounded color="success" onClick={()=>submit(course._id)}>Book Now</MDBBtn>
-        
+        <MDBBtn rounded color="success" >Previous Page</MDBBtn>
       </section>
   );
 }

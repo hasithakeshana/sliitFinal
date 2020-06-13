@@ -21,7 +21,7 @@ localStorage.removeItem('jwtToken');
 render() {
   return (
 <div>
-      <MDBNavbar color="default-color" dark expand="md">
+      <MDBNavbar color="indigo" dark expand="md">
         <MDBNavbarBrand>
           <strong className="white-text">Navbar</strong>
         </MDBNavbarBrand>
@@ -33,9 +33,6 @@ render() {
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/register">SignUp</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/booknow">BookNow</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/login">Login</MDBNavLink>
