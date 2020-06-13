@@ -29,6 +29,9 @@ render() {
               <MDBNavLink to="/projects">Features</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
+              <MDBNavLink to="/Sample">Sample</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
               <MDBNavLink to="/testPage">TestPage</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>

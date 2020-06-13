@@ -16,13 +16,16 @@ import PieChart from './components/PieChart';
 import TestPage from './trial/TestPage';
 import Projects from './components/TravelProjects';
 
+import Landing from './landingPage/landing';
+import Sample from './components/Sample';
+
 
 class App extends Component {
   render() {
     return (
      <div>
     <Router>
-     <NavBar></NavBar>
+    <NavBar></NavBar>
      <Switch>
           <Route exact path="/" component={MainPage}/>
             
@@ -30,7 +33,7 @@ class App extends Component {
           <Route exact path="/projects" component={Projects}/>
            
          
-          <Route exact path="/lineChart" component={LineChart}/>
+          <Route exact path="/Sample" component={Sample}/>
 
           <Route exact path="/testPage" component={TestPage}/>
 
