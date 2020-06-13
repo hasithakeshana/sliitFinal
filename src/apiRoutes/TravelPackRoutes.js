@@ -2,15 +2,12 @@ const axios = require('axios').default;
 
 export const addTravelPackage = async(pack) =>{
 
-    
         try {
             
     
             const reqBody = pack;
 
             console.log('reqbody',reqBody);
-    
-         
     
             const response = await axios
                 .request({

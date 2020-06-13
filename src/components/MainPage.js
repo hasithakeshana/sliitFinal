@@ -7,8 +7,9 @@ import Grid from './Grid';
 import Projects from './TravelProjects';
 import Images from './Images';
 import Landing from '../landingPage/landing';
-
+import Courses from './Courses';
 import back from './back.css';
+import Book from './BookCourse';
 
 export class MainPage extends Component {
     render() {
@@ -20,9 +21,9 @@ export class MainPage extends Component {
            
             <Images></Images>
              
-             <Grid></Grid>
-           
+            <Courses></Courses>
          
+           
            
            
             </div>

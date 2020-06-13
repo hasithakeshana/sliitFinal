@@ -18,6 +18,7 @@ import Projects from './components/TravelProjects';
 
 import Landing from './landingPage/landing';
 import Sample from './components/Sample';
+import BookNow from './components/BookCourse';
 
 
 class App extends Component {
@@ -33,7 +34,7 @@ class App extends Component {
           <Route exact path="/projects" component={Projects}/>
            
          
-          <Route exact path="/Sample" component={Sample}/>
+          <Route exact path="/booknow" component={BookNow}/>
 
           <Route exact path="/testPage" component={TestPage}/>
 
