@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 
-import LineChart from './LineChart';
-import PieChart from './PieChart';
-import NavBar from './NavBar';
-import Grid from './Grid';
-import Projects from './TravelProjects';
+
 import Images from './Images';
-import Landing from '../landingPage/landing';
+
 import Courses from './Courses';
-import back from './back.css';
-import Book from './BookCourse';
+
 
 import Sample from './Sample';
 

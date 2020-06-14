@@ -10,18 +10,15 @@ import {
 
 import MainPage from './components/MainPage';
 import NavBar from './components/NavBar';
-import LineChart from './components//LineChart';
-import PieChart from './components/PieChart';
 
-import TestPage from './trial/TestPage';
-import Projects from './components/TravelProjects';
 
-import Landing from './landingPage/landing';
-import Sample from './components/Sample';
+
+
+
 import BookNow from './components/BookCourse';
 import Login from './components/Login';
 import Register from './components/Register';
-import Footer from './components/Footer';
+
 
 
 class App extends Component {
@@ -34,10 +31,7 @@ class App extends Component {
           <Route exact path="/" component={MainPage}/>
             
           
-          <Route exact path="/projects" component={Projects}/>
-           
-         
-          <Route exact path="/booknow" component={BookNow}/>
+       <Route exact path="/booknow" component={BookNow}/>
 
           <Route exact path="/login" component={Login}/>
           <Route exact path="/register" component={Register}/>

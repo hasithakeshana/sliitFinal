@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 
-import LineChart from './LineChart';
+
 import PieChart from './PieChart';
-import NavBar from './NavBar';
-import Grid from './Grid';
-import Projects from './TravelProjects';
-import Images from './Images';
-import Landing from '../landingPage/landing';
+
 
 import CoursesChart from './CoursesChart';
 
