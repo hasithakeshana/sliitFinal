@@ -56,7 +56,7 @@ const FormPage = () => {
       
     <MDBContainer>
       <MDBRow>
-        <MDBCol md="6">
+        <MDBCol md="6" style={{alignItems:"center"}}>
           <MDBCard>
             <MDBCardBody className="mx-4">
               <div className="text-center">

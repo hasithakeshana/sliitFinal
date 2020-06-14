@@ -31,12 +31,7 @@ render() {
             <MDBNavItem active>
               <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/register">SignUp</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/login">Login</MDBNavLink>
-            </MDBNavItem>
+          
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
@@ -52,32 +47,31 @@ render() {
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-              <span onClick={ () => this.clicked()}>
-                <MDBIcon  icon="power-off" />
-                SignOut
-                </span>
-              </MDBNavLink>
+          
+            
+            <MDBNavItem >
+        <MDBNavLink className="waves-effect waves-light" to="/login" >
+
+          
+            <MDBIcon icon="user" /> Login
+           
+        </MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem >
+        <MDBNavLink className="waves-effect waves-light" to="/register">
+            <MDBIcon icon="user-plus" /> Register
+            </MDBNavLink>
             </MDBNavItem>
+
             <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="google-plus-g" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                  <MDBIcon icon="user" />
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
+            <MDBNavLink className="waves-effect waves-light" to="">
+            <span onClick={ () => this.clicked()}>
+              <MDBIcon  icon="power-off" />
+              SignOut
+              </span>
+            </MDBNavLink>
+          </MDBNavItem>
+           
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
