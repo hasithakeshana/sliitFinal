@@ -38,7 +38,7 @@ render() {
                   <div className="d-none d-md-inline">Dropdown</div>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
+                  <MDBDropdownItem href="/grid">Action</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>

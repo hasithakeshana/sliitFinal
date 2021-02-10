@@ -1,28 +1,41 @@
 import React    , {useEffect, useState}  from "react";
 import {  MDBRow, MDBCol, MDBCardBody, MDBIcon, MDBBtn, MDBView, MDBMask } from "mdbreact";
 import queryString from 'query-string';
-import {getUniqueCourse,bookCourse} from '../apiRoutes/CoursesRoutes';
+import {getUniqueCourse,bookCourse} from '../apiRoutes/PackageRoutes';
 import jwt_decode from 'jwt-decode';
+import Modal from './BookView';
+import { render } from "enzyme";
+import { useHistory } from 'react-router-dom';
 
+/*
+    Get unique package and book a package
+*/
 
 const BookCourse = (props) => {
 
+    const history = useHistory();
+
     const [course,setCourse] = useState({});
+    const [modal,setModal] = useState(false);
+
+    const testModal = async () => {
+      setModal(true);
+    }
 
     const  fetchData = async (id) => {
         try {
             console.log('fetch',id);
             const response = await getUniqueCourse(id).then((res)=>{
-                    setCourse(res.data.course);
-                    console.log('resssssss',res.data.course.fee);
+                    setCourse(res.data.package);
+                   // console.log('resssssss',res.data.course.fee);
             });
-            console.log('unique',response);
+            
            
         } catch (e) {
             console.error(e);
         }
     };
-    console.log('coursesssssssssss',course.name);
+    
 
     useEffect(() => {
         const values = queryString.parse(props.location.search);
@@ -46,6 +59,7 @@ const BookCourse = (props) => {
         const userId = decodeUser.id;
 
         const data = {email,userId,id}
+        
         const res = await bookCourse(data);
 
         console.log('res bookkig',res);
@@ -53,8 +67,10 @@ const BookCourse = (props) => {
       }
     }
 
-    const back = async ()=>{
-        
+    
+
+    const handleClick = (id) => {
+      history.push("/bookView");
     }
 
 
@@ -109,7 +125,7 @@ const BookCourse = (props) => {
               <MDBCol md="11" size="10">
                 <h5 className="font-weight-bold mb-3">Scheduled Date</h5>
                 <p className="font-weight-bold">
-                  {course.date}
+                  {course.time}
                 </p>
               </MDBCol>
             </MDBRow>
@@ -129,9 +145,9 @@ const BookCourse = (props) => {
             <MDBIcon far icon="smile" size="2x" className="blue-text" />
           </MDBCol>
           <MDBCol md="11" size="10">
-            <h5 className="font-weight-bold mb-3">No Of Participants(estimate)</h5>
+            <h5 className="font-weight-bold mb-3">estimate charge (LKR) </h5>
             <p className="font-weight-bold">
-              {course.noOfParticipants}
+              {course.fee}
             </p>
           </MDBCol>
         </MDBRow>
@@ -139,8 +155,9 @@ const BookCourse = (props) => {
         </MDBRow>
         <hr className="my-5" />
         <MDBBtn rounded color="success" onClick={()=>submit(course._id)}>Book Now</MDBBtn>
-        <MDBBtn rounded color="success" >Previous Page</MDBBtn>
-      </section>
+        <MDBBtn rounded color="success" onClick={()=> handleClick()}>Previous Page</MDBBtn>
+        
+       </section>
   );
 }
 

@@ -1,4 +1,5 @@
 const axios = require('axios').default;
+
 export const Login = async (user) => {
 
     try {
@@ -10,7 +11,7 @@ export const Login = async (user) => {
      // console.log(correctData);
         const response = await axios.request({
             method: 'POST',
-            url: `http://localhost:4000/student/login`,
+            url: `http://localhost:4000/user/login`,
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8',
                 "Access-Control-Allow-Origin": "*"
@@ -43,7 +44,7 @@ export const RegisterUser = async (user) => {
      // console.log(correctData);
         const response = await axios.request({
             method: 'POST',
-            url: `http://localhost:4000/student/signup`,
+            url: `http://localhost:4000/user/signup`,
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8',
                 "Access-Control-Allow-Origin": "*"

@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import {RegisterUser} from '../apiRoutes/userRoutes';
 import jwt_decode from 'jwt-decode';
-
 import {useHistory} from 'react-router-dom';
 
 const Register = () => {

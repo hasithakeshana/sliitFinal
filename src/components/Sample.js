@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 
-import PieChart from './PieChart';
+import PieChart from '../graphs/PieChart';
 
 
-import CoursesChart from './CoursesChart';
+import CoursesChart from '../graphs/PackageChart';
 
 export class Sample extends Component {
     render() {

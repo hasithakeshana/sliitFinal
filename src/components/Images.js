@@ -2,7 +2,7 @@ import React from "react";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
 
-import img1 from '../images/on6.jpg';
+import img1 from '../images/food3.jpg';
 import img2 from '../images/on3.jpg';
 import img3 from '../images/on4.jpg';
 
@@ -29,7 +29,7 @@ const CarouselPage = () => {
           <MDBMask overlay="black-light" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Light mask</h3>
+            <h3 className="h3-responsive"></h3>
             <p>First text</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -43,7 +43,7 @@ const CarouselPage = () => {
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Strong mask</h3>
+            <h3 className="h3-responsive"></h3>
             <p>Second text</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -57,7 +57,7 @@ const CarouselPage = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Slight Mast</h3>
+            <h3 className="h3-responsive"></h3>
             <p>Third text</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
